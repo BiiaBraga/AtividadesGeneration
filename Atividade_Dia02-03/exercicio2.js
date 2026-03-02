@@ -27,4 +27,4 @@ nota4 = leia.questionFloat("Digite a nota 4: ");
 media = ((nota1 + nota2 + nota3 + nota4) / 4);
 
 //saida
-console.log("A média final é %f", media);
+console.log("A média final é %f", media.toFixed(1));
