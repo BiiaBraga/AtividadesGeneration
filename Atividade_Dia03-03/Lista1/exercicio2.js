@@ -2,10 +2,9 @@
  * Autora: Beatriz Braga Silva
  * Data: 03/03
  * 
- * Atividade: Desenvolva um algoritmo que leia 3 valores inteiros A, B e C e 
- * imprima na tela se a soma de A + B é maior, menor ou igual a C.
- * Na construção do Algoritmo, utilize os seguintes conteúdos: Entrada e Saída 
- * de dados, Operadores e Laço Condicional IF
+ * Atividade: Escreva um algoritmo que leia um número inteiro via teclado 
+ * e mostre na tela uma mensagem indicando se este número é par ou ímpar 
+ * e se o número é positivo ou negativo.
  * 
  */
 
@@ -21,17 +20,16 @@ let ehPositivo;
 numero = leia.questionInt("Digite um numero: ");
 
 //processamento
-
-//verifica se eh par 
 if (numero%2 == 0){
-    console.log("O numero %d eh par e ", numero);
+    if (numero>=0){
+        console.log("O numero %d eh par e positivo!", numero);
+    } else {
+        console.log("O numero %d eh par e negativo!", numero);
+    }
 } else {
-    console.log("O numero %d eh impar e ", numero);
-}
-
-//verifica se eh negativo
-if (numero>=0){
-    console.log("positivo");
-} else {
-    console.log("negativo");
+    if (numero>=0){
+        console.log("O numero %d eh impar e positivo!", numero);
+    } else {
+        console.log(" O numero %d eh impar e negativo!", numero);
+    }
 }
