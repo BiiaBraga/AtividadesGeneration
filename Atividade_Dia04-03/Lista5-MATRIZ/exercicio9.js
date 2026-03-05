@@ -15,15 +15,39 @@
 import leia from 'readline-sync'
 
 //variaveis e constantes
-const matriz = new Array(3);
+const matriz = [[null, null, null],
+                [null, null, null],
+                [null, null, null]]
 let somaPrincipal = 0;
-let somaSecundario = 0;
+let somaSecundaria = 0;
+let j = 2;
 
 //MENU
 console.log("\n//========= EXERCÍCIO 9 =========//\n");
 console.log("//-- DIAGONAL DA MATRIZ: --//\n");
 
 //entrada
-for(let i=0; i<matriz.length; i++){
-    
+for(let i=0; i<3; i++){
+    for(let j=0; j<3; j++){
+        matriz[i][j] = leia.questionInt("Insira um valor: ");
+    }
 }
+
+//diagonal Principal
+console.log("Os valores da Diagonal Principal:");
+for(let i=0; i<3; i++){
+    somaPrincipal+=matriz[i][i];
+    console.log(matriz[i][i]);
+}
+
+//diagonal Segundaria
+console.log("Os valores da Diagonal Secundaria:");
+for(let i=0; i<3; i++){
+    somaSecundaria+=matriz[i][j];
+    console.log(matriz[i][j]);
+    j--;
+}
+
+//saida
+console.log("Soma dos Elementos da Diagonal Principal: %d", somaPrincipal);
+console.log("Soma dos Elementos da Diagonal Secundaria: %d", somaSecundaria);
